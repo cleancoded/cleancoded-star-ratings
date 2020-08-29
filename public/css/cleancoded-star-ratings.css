@@ -1,0 +1,125 @@
+.cleancoded-star-ratings {
+    display: -webkit-inline-box !important;
+    display: -webkit-inline-flex !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    vertical-align: text-top;
+}
+
+.cleancoded-star-ratings.cleancoded-valign-top {
+    margin-bottom: 2rem;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.cleancoded-star-ratings.cleancoded-valign-bottom {
+    margin-top: 2rem;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.cleancoded-star-ratings.cleancoded-align-left {
+    -webkit-box-pack: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+}
+
+.cleancoded-star-ratings.cleancoded-align-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.cleancoded-star-ratings.cleancoded-align-right {
+    -webkit-box-pack: flex-end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+}
+
+.cleancoded-star-ratings .cleancoded-muted {
+    opacity: .5;
+}
+
+.cleancoded-star-ratings .cleancoded-stars {
+    /* display: flex; */
+    position: relative;
+}
+
+.cleancoded-star-ratings .cleancoded-stars .cleancoded-stars-active,
+.cleancoded-star-ratings .cleancoded-stars .cleancoded-stars-inactive {
+    display: flex;
+}
+
+.cleancoded-star-ratings .cleancoded-stars .cleancoded-stars-active {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cleancoded-star-ratings .cleancoded-stars .cleancoded-star {
+    /* display: inline-flex; */
+    cursor: pointer;
+    margin-right: 0px;
+}
+
+.cleancoded-star-ratings.cleancoded-disabled .cleancoded-stars .cleancoded-star {
+    cursor: default;
+}
+
+.cleancoded-star-ratings .cleancoded-stars .cleancoded-star .cleancoded-icon {
+    /* fill: currentColor;
+    stroke: currentColor; */
+    transition: .3s all;
+}
+
+/* Images */
+
+.cleancoded-star-ratings:not(.cleancoded-disabled) .cleancoded-stars:hover .cleancoded-stars-active {
+    width: 0 !important;
+}
+
+.cleancoded-star-ratings .cleancoded-stars .cleancoded-star .cleancoded-icon,
+.cleancoded-star-ratings:not(.cleancoded-disabled) .cleancoded-stars .cleancoded-star:hover ~ .cleancoded-star .cleancoded-icon {
+    background-image: url("../svg/inactive.svg");
+}
+
+.cleancoded-star-ratings .cleancoded-stars .cleancoded-stars-active .cleancoded-star .cleancoded-icon {
+    background-image: url("../svg/active.svg");
+}
+
+.cleancoded-star-ratings.cleancoded-disabled .cleancoded-stars .cleancoded-stars-active .cleancoded-star .cleancoded-icon,
+.cleancoded-star-ratings:not(.cleancoded-disabled) .cleancoded-stars:hover .cleancoded-star .cleancoded-icon {
+    background-image: url("../svg/selected.svg");
+}
+
+.cleancoded-star-ratings .cleancoded-legend {
+    margin-left: .75rem;
+    margin-right: .75rem;
+    font-size: 90%;
+    opacity: .8;
+    line-height: 1;
+}
+
+/* RTL */
+
+[dir="rtl"] .cleancoded-star-ratings .cleancoded-stars .cleancoded-stars-active {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .cleancoded-star-ratings .cleancoded-stars .cleancoded-star {
+    margin-left: 0px;
+    margin-right: 0;
+}

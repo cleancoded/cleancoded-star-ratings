@@ -1,0 +1,1 @@
+<?= \cleancoded\StarRating\view('star') ?>
